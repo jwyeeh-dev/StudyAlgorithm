@@ -36,7 +36,7 @@ def binary_search(array, target, start, end):
         return mid
     # 중간점의 값보다 찾고자 하는 값이 작은 경우 왼쪽 확인
     elif array[mid] > target:
-        return binary_search(array, target, mid + 1, end)
+        return binary_search(array, target, start, mid - 1)
     # 중간점의 값보다 찾고자 하는 값이 큰 경우 오른쪽 확인
     else:
         return binary_search(array, target, mid + 1, end)
